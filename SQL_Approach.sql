@@ -1,4 +1,4 @@
--- SQL Approach
+-- SQL Approach for the problem
 
 SELECT
 	c.customer_id,
@@ -15,7 +15,7 @@ ON s.sales_id = o.sales_id
 INNER JOIN
 	Items  i
 ON o.item_id = i.item_id
-	WHERE age BETWEEN 18 AND 35
+	WHERE age BETWEEN 18 AND 36
 GROUP BY c.customer_id,age,item_name
 	HAVING SUM(COALESCE(quantity, 0)) > 0
 ORDER BY c.customer_id,item_name;
