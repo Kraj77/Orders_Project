@@ -8,7 +8,7 @@ SELECT
 FROM
 	Customer c
 INNER JOIN Sales s
-	ON c.customer_id = s.c.customer_id
+	ON c.customer_id = s.customer_id
 INNER JOIN 
 	Orders o
 ON s.sales_id = o.sales_id
