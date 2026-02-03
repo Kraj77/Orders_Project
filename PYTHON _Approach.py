@@ -12,8 +12,8 @@ df_items = pd.read_sql("SELECT * FROM Items",db_con)
 
 
 df_joined1 = df_cust.merge(df_sales, on="customer_id",how="inner")
-df_joined2 = df_joined1.merge(Orders, on="sales_id", how="inner")
-df_joined3 = df_joined2.merge(Items, on="item_id", how="inner")
+df_joined2 = df_joined1.merge(df_orders, on="sales_id", how="inner")
+df_joined3 = df_joined2.merge(df_items, on="item_id", how="inner")
 
 df_filter = df_joined3[(df_joined3["age"]) >= 18 & (df_joined3["age"]<=35)]
 
