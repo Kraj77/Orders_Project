@@ -26,3 +26,5 @@ final = final[final["quantity"]>0]
 final["quantity"]= final["quantity"].astype(int)
 
 final.to_csv("final.csv",sep=";",index=False)
+
+print("testing")
